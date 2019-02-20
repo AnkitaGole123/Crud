@@ -25,6 +25,13 @@ exports.seed = function seed( knex, Promise ) {
         email: 'soni@gmail.com',
     },
 
+    {
+        name: 'deepa sinha',
+        username: 'deepa1234',
+        password: 'oyebebn',
+        email: 'deepa@gmail.com',
+    },
+
   ];
 
   return knex( tableName )
