@@ -2,15 +2,15 @@ const knex = require("./knex");
 const routes=[
     {
         method: 'GET',
-        path: '/{ramu}',
+        path: '/{priya}',
         handler: (request, h) => {
 
-            return `Hello, ${request.params.ramu}!`;
+            return `Hello, ${request.params.priya}!`;
         }
     },
     {
         method: 'GET',
-        path: '/hello',
+        path: '/priya',
         handler: (request, h) => {
 
             return h.file('./public/hello.html');
@@ -23,7 +23,7 @@ const routes=[
             let pr = (resolve,reject) => {
                 knex("users").select("name","username","email","password")
                     .then((result)=>{
-                        console.log(result)
+                        console.log(result);
                         return resolve(h.response(result));
             
                     })
